@@ -1,0 +1,37 @@
+###
+PUT http://localhost:8080/addProduct
+Content-Type: application/json
+
+{
+  "serialNumber": 34254325,
+  "manafacturer": "samsung",
+  "price" : 1234,
+  "inStock": 23,
+  "type": "pc",
+  "customProperties":[
+    {"name":"diagonal",
+    "value":"12"}
+    ]
+}
+
+###
+POST http://localhost:8080/updateProduct
+Content-Type: application/json
+
+{
+  "serialNumber": 34254325,
+  "manafacturer": "samsung",
+  "price" : 2222,
+  "inStock": 3333,
+  "type": "pc",
+  "customProperties":[
+    {"name":"diagonal",
+      "value":"34"}
+  ]
+}
+
+###
+GET http://localhost:8080/getAllProductByType/pc
+
+###
+GET http://localhost:8080/getProductById/1
